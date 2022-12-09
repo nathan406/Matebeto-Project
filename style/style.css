@@ -31,12 +31,20 @@ body {
 .carousel-item {
   height: 32rem;
 }
+
+/* menu courasel on restaraunt preview page */
+.carousel-menu {
+  height: 22rem;
+  width: 22rem;
+}
+
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: 32rem;
+  width: 32rem;
 }
 .{
   width: 80vw;
