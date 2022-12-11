@@ -1,5 +1,21 @@
+
 main{
 	
+}
+@font-face{
+  font-family: rubik;
+  src: url('fonts/rubik/Rubik1.ttf');
+}
+@font-face{
+  font-family: open;
+  src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf');
+}
+#meaty{
+  
+}
+/*cart*/
+#t1{
+  font-family: rubik;
 }
 /*Show it is fixed to the top */
 body {
