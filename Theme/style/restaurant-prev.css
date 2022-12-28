@@ -1,13 +1,21 @@
-
+body{
+  width: 100vh;
+}
+.main-container{
+  margin: auto;
+  width: 100vh;
+}
 .container{
   background-color: rgb(147, 139, 139);
-  min-width: fit-content;
-  max-width: 100px;
+  min-width: min-content;
+  max-width: max-content;
+  width: 100vh;
   padding: 50px;
   border-radius: 20px;
-  align-items: center;
-  display: block;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
 }
 /* =====restaurant info===== */
 .Restaurant-info{
