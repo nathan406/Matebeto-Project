@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'Base',
 ]
 
+AUTH_USER_MODEL = 'Base.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'Matebeto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"Templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,8 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "Matebeto"/"static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
