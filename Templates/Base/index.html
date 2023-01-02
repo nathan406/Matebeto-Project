@@ -1,0 +1,102 @@
+{% extends 'Base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- The home carousel -->
+<div id="carouselHomepage" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <img src="{% static 'img/home-bg-1.jpg' %}" class="d-block w-100 home-bg-img h-50-vh" alt="...">
+            <div class="carousel-caption d-md-block home-bg-cover">
+                <h5>Matebeto Restaurants</h5>
+                <p>Were are here to serve your hunger.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="8000">
+            <img src="{% static 'img/home-bg-2.jpg' %}" class="d-block w-100 home-bg-img h-50-vh" alt="...">
+            <div class="carousel-caption d-md-block home-bg-cover">
+                <h5>Having and event?</h5>
+                <p>Make an order and we shall carter the feeding for you.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="8000">
+            <img src="{% static 'img/home-bg-3.jpg' %}" class="d-block w-100 home-bg-img h-50-vh" alt="...">
+            <div class="carousel-caption d-md-block home-bg-cover">
+                <h5>So what are you Waiting for?</h5>
+                <p>
+                    <a class="btn btn-warning mx-2" href="#order">Make an Order</a>
+                    <a class="btn btn-outline-warning mx-2" href="#contact">Contact Us</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHomepage" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHomepage" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<section class="my-4">
+    <div class="">
+        <h4 class="text-center fw-bolder">Explore Restaurants</h4>
+        <p class="text-center">Look around here and there. Roll your eyes as much as you can. Explore restuarants around
+            Matebeto.</p>
+    </div>
+
+    <div class="row justify-content-center px-3 w-100 restaurant-list">
+        <!-- we'll use an iterator (e.g. for loop) to generate restuarants list -->
+
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-4 p-2">
+            <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <h6 class="text-center">some restuarant name</h6>
+                <p class="text-center text-secondary">then some description of the some restuarant</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

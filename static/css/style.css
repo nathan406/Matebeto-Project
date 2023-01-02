@@ -1,0 +1,103 @@
+.h-100-vh {
+    height: 100vh;
+}
+.h-50-vh {
+    height: 50vh;
+}
+#navbar {
+    color: white;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+#navbar div{    
+    min-height: 60px;
+
+}
+
+#navbar ul, #mobile-nav ul {
+    list-style: none;
+}
+#navbar ul li a, #mobile-nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 12.5pt;
+    
+}
+#navbar ul li a:hover , #mobile-nav ul li a:hover {
+    color: #ffc107;;
+    text-decoration:underline;
+    font-weight: 800;
+}
+#mobile-nav ul {
+    flex-direction: column;
+    row-gap: 15px;
+    width: 100%;
+}
+.menu-mobile-btn {
+    display: none;
+}
+.login-btn, .signup-btn{
+    border-radius: 20px !important;
+    border-width: 2px !important;
+}
+.login-btn:hover, .signup-btn:hover{
+    text-decoration: none !important;
+    
+}
+.home-bg-img {
+    object-fit: cover;
+    
+}
+.home-bg-cover {
+    background-color: rgba(0, 0, 0, 0.392);
+    
+}
+.restaurant-list {
+    row-gap: 8px;
+}
+.restaurant-card {
+    cursor: pointer;
+}
+#authenticate-direct {
+    background-image: url('/static/img/zambezi-falls-large.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: 0% 0%;
+}
+#authenticate-direct-choose {
+    background-color: rgba(10, 10, 128, 0.346);
+}
+#authenticate-direct-card{
+    width: 22rem;
+}
+@media screen and (max-width: 600px) {
+    #authenticate-direct-card {
+        width: 100% !important;
+        border: none;
+        border-radius: 0!important;
+    }
+    #authenticate-direct-choose {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    #navbar div{    
+        min-height: 50px;
+    }
+    .menu-part-two {
+        display: none !important;
+    }
+    .menu-mobile-btn {
+        display: flex;
+    }
+    .menu-part-one {
+        width: 100% !important;
+        justify-content: space-between !important;
+    }
+
+}
