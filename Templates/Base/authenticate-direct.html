@@ -1,21 +1,25 @@
-<html lang="en">
-{%load static%}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>Register As A</div>
-    <div>
-        <p>
-            <a href="">Restaurant Owner</a> <strong>or</strong>
-            <a href="{% url 'LoginRegisterUser' %}">Customer</a>
-        </p>
-       
-    </div>
-    
 
-</body>
-</html>
+
+{% extends 'Base/base.html' %}
+
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+    <div class="container-fluid p-0" id="authenticate-direct">
+        <div id="authenticate-direct-choose" class="h-100 d-flex justify-content-center align-items-center">
+            <div class="card p-4" id="authenticate-direct-card">
+                <div class="h5 text-center border-bottom p-2">Matebeto</div>
+                <p class="text-center mb-3"><em>Register As:</em></p>
+                <div class="d-flex flex-column">
+                    <a class="btn btn-primary w-100" href="">Restaurant Owner</a> 
+                    <div class=" my-3 text-center h6"><strong>or</strong></div>
+                    <a class="btn btn-primary w-100"  href="{% url 'LoginRegisterUser' %}">Customer</a>
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+
+{% endblock %}
