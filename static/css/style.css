@@ -39,6 +39,16 @@
 .menu-mobile-btn {
     display: none;
 }
+/* == nathan's css == */
+.signup-forms input{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 300px;
+}
+.signup-forms input::placeholder{
+    text-align: center;
+}
+/* ==  end  == */
 .login-btn, .signup-btn{
     border-radius: 20px !important;
     border-width: 2px !important;
