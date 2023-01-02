@@ -1,0 +1,25 @@
+
+
+{% extends 'Base/base.html' %}
+
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+    <div class="container-fluid p-0" id="authenticate-direct">
+        <div id="authenticate-direct-choose" class="h-100 d-flex justify-content-center align-items-center">
+            <div class="card p-4" id="authenticate-direct-card">
+                <div class="h5 text-center border-bottom p-2">Matebeto</div>
+                <p class="text-center mb-3"><em>Register As:</em></p>
+                <div class="d-flex flex-column">
+                    <a class="btn btn-primary w-100" href="">Restaurant Owner</a> 
+                    <div class=" my-3 text-center h6"><strong>or</strong></div>
+                    <a class="btn btn-primary w-100"  href="{% url 'LoginRegisterUser' %}">Customer</a>
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+
+{% endblock %}
