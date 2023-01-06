@@ -1,10 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
 <ul class="d-flex justify-content-between align-items-center my-2">
     <li><a href="/">Home</a></li>
     <li><a href="/">Restaurants</a></li>
     <li><a href="/">Services</a></li>
     <li><a href="/">Contact Us</a></li>
     <li><a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-    <li><a class="btn btn-pill btn-outline-primary login-btn px-4" href="{% url 'authDirect' %}">Login</a>
-    </li>
-    <li><a class="btn btn-pill btn-primary signup-btn px-4" href="{% url 'authDirect' %}">Signup</a></li>
+    {% if user.is_authenticated %}
+        <div>
+            <img src="{% static 'img/user-icon.webp' %}" class="user-icon" alt="">
+           
+            
+            <a href="{% url 'logout' %}">logout</a>
+                
+            
+
+            <!-- <div class="dropdownWrapper">
+                <select autofocus="autofocus" class="hide-first-option" data-val="true" data-val-required="The WorkStatus field is required." id="WorkStatus" name="WorkStatus" required="required" aria-required="true"><option value="">Retirement Status:</option>
+                  <option value="Retired">Retired</option>
+                  <option value="Working">Working</option>
+                </select>
+              </div>
+            </div> -->
+        
+    {% else %}
+        <li><a class="btn btn-pill btn-outline-primary login-btn px-4" href="{% url 'authDirect' %}">Login</a>
+        </li>
+        <li><a class="btn btn-pill btn-primary signup-btn px-4" href="{% url 'authDirect' %}">Signup</a></li>
+    {% endif %}
 </ul>

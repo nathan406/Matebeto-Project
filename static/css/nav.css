@@ -1,0 +1,47 @@
+.user-icon{
+    border-radius: 1rem;
+    margin-top: 15px;
+}
+.chevron-down{
+    margin: 0;
+    margin-top: 20px;
+    width: 20px;
+}
+select{
+    background: transparent;
+    width: 1.5rem;
+    border-color: transparent;
+    
+}
+.option1{
+    color: blue;
+}
+.options{
+    color: rgb(219, 25, 25);
+    background-color: black;
+    width: max-content;
+}
+/* option{
+    width: 240px;
+    
+} */
+
+.dropdownWrapper {
+    width: 185px;
+    height: 40px;
+    overflow: hidden;
+    background: url("https://i.imgur.com/NvpeSY6.png") no-repeat right;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .dropdownWrapper select {
+     background: transparent;
+     width: 180px;
+     padding: 10px;
+     font-size: 16px;
+     line-height: 1;
+     border-radius: 0;
+     height: 40px;
+    -webkit-appearance: none;
+  }
