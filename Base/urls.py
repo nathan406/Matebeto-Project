@@ -9,4 +9,6 @@ urlpatterns = [
     path("RegisterUser/",views.RegisterUser , name="RegisterUser"),
     path('logout/', views.logout, name="logout"),
     path("LoginUser/",views.LoginUser, name="LoginUser"),
+    path("LoginRestaurant/",views.LoginRestaurant, name="LoginRestaurant" ),
+    path("RegisterRestaurant/",views.RegisterRestaurant,name="RegisterRestaurant"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

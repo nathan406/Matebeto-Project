@@ -12,7 +12,7 @@
             <img src="{% static 'img/user-icon.webp' %}" class="user-icon" alt="">
            
             
-            <a href="{% url 'logout' %}">logout</a>
+            <a href="{% url 'logout' %}">logoutuser</a>
                 
             
 
@@ -23,7 +23,13 @@
                 </select>
               </div>
             </div> -->
+    {% elif Restaurant.is_authenticated %}
+        <div>
+          <img src="{% static 'img/user-icon.webp' %}" class="user-icon" alt="">
         
+          
+          <a href="{% url 'logout' %}">logoutrestaurant</a>
+
     {% else %}
         <li><a class="btn btn-pill btn-outline-primary login-btn px-4" href="{% url 'authDirect' %}">Login</a>
         </li>
