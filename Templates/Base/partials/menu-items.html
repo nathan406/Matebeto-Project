@@ -7,12 +7,12 @@
     <li><a href="/">Services</a></li>
     <li><a href="/">Contact Us</a></li>
     <li><a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated and request.user.is_customer%}
         <div>
             <img src="{% static 'img/user-icon.webp' %}" class="user-icon" alt="">
            
             
-            <a href="{% url 'logout' %}">logoutuser</a>
+            <a href="{% url 'logout' %}">logoutcustomer</a>
                 
             
 
@@ -23,12 +23,12 @@
                 </select>
               </div>
             </div> -->
-    {% elif Restaurant.is_authenticated %}
+    {% elif user.is_authenticated and request.user.is_restaurantowner %}
         <div>
           <img src="{% static 'img/user-icon.webp' %}" class="user-icon" alt="">
         
           
-          <a href="{% url 'logout' %}">logoutrestaurant</a>
+          <a href="{% url 'logout' %}">logoutrestaurantowner</a>
 
     {% else %}
         <li><a class="btn btn-pill btn-outline-primary login-btn px-4" href="{% url 'authDirect' %}">Login</a>

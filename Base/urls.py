@@ -6,9 +6,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("",views.index ,name="index"),
     path("authDirect/",views.authDirect, name="authDirect"),
-    path("RegisterUser/",views.RegisterUser , name="RegisterUser"),
+    path("RegisterCustomer/",views.RegisterCustomer , name="RegisterCustomer"),
     path('logout/', views.logout, name="logout"),
-    path("LoginUser/",views.LoginUser, name="LoginUser"),
-    path("LoginRestaurant/",views.LoginRestaurant, name="LoginRestaurant" ),
-    path("RegisterRestaurant/",views.RegisterRestaurant,name="RegisterRestaurant"),
+    path("LoginCustomer/",views.LoginCustomer, name="LoginCustomer"),
+    path("LoginRestaurantOwner/",views.LoginRestaurantOwner, name="LoginRestaurantOwner" ),
+    path("RegisterRestaurantOwner/",views.RegisterRestaurantOwner,name="RegisterRestaurantOwner"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

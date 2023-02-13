@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .forms import UserRegisterForm,RestaurantRegisterForm
+from .forms import CustomerSignUpForm,RestaurantOwnerSignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import auth
 
@@ -11,10 +11,10 @@ def authDirect(request):
 def index(request):
     return render(request,"Base/index.html")
 
-def RegisterUser(request):
+def RegisterCustomer(request):
     # if page is register we will render the register form 
     page = "register"
-    form = UserRegisterForm()
+    form = CustomerSignUpForm()
 
     context = {
         "page":page,
@@ -22,7 +22,7 @@ def RegisterUser(request):
     }
 
     if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
+        form = CustomerSignUpForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
@@ -30,9 +30,9 @@ def RegisterUser(request):
             login(request, user)
             return redirect('index')
 
-    return render(request , "Base/RegisterUser.html",{"context":context})
+    return render(request , "Base/RegisterCustomer.html",{"context":context})
 
-def LoginUser(request):
+def LoginCustomer(request):
     if request.user.is_authenticated:
         return redirect('index')
     
@@ -50,17 +50,18 @@ def LoginUser(request):
         login(request,user)
         return redirect('index')
 
-    return render(request, "Base/LoginUser.html" )
+    return render(request, "Base/LoginCustomer.html" )
 
-def RegisterRestaurant(request):
-    form = RestaurantRegisterForm()
+
+def RegisterRestaurantOwner(request):
+    form = RestaurantOwnerSignUpForm()
 
     context = {
         "form":form,
     }
 
     if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
+        form = RestaurantOwnerSignUpForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
@@ -68,11 +69,11 @@ def RegisterRestaurant(request):
             login(request, user)
             return redirect('index')
 
-    return render(request , "Base/RegisterUser.html",{"context":context})
+    return render(request , "Base/RegisterRestaurantOwner.html",{"context":context})
     return render(request, "Base/RegisterRestaurant.html")
 
-def LoginRestaurant(request):
-    if request.Resaturant.is_authenticated:
+def LoginRestaurantOwner(request):
+    if request.user.is_authenticated:
         return redirect('index')
     
     username = None
@@ -88,7 +89,7 @@ def LoginRestaurant(request):
     if Restaurant is not None:
         login(request,Restaurant)
         return redirect('index')
-    return render(request, "Base/LoginRestaurant.html")
+    return render(request, "Base/LoginRestaurantOwner.html")
 
 def logout(request):
     auth.logout(request)
