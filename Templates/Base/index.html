@@ -42,7 +42,16 @@
 </div>
 <section class="my-4">
     <div class="">
-        <h4 class="text-center fw-bolder">Explore Restaurants</h4>
+        {% if user.is_authenticated and request.user.is_restaurantowner %}
+        <h4 class="text-center fw-bolder">
+            Explore Restaurants  or <button type="button" class="btn btn-primary"> Create A Restaurant </button>
+        </h4> 
+
+        {% else %}
+        <h4 class="text-center fw-bolder">
+            Explore Restaurants  
+        </h4> 
+        {%endif%}
         <p class="text-center">Look around here and there. Roll your eyes as much as you can. Explore restuarants around
             Matebeto.</p>
     </div>
@@ -52,43 +61,50 @@
 
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
-                <h6 class="text-center">some restuarant name</h6>
-                <p class="text-center text-secondary">then some description of the some restuarant</p>
+                <img src="{%static 'img/1.jpg'%}" alt="">
+                <h6 class="text-center">Kays restuarant</h6>
+                <p class="text-center text-secondary">Here to serve you better</p>
             </div>
         </div>
 
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <img src="{%static 'img/6.jpg'%}" alt="">
                 <h6 class="text-center">some restuarant name</h6>
                 <p class="text-center text-secondary">then some description of the some restuarant</p>
             </div>
         </div>
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <img src="{%static 'img/7.jpg'%}" alt="">
                 <h6 class="text-center">some restuarant name</h6>
                 <p class="text-center text-secondary">then some description of the some restuarant</p>
             </div>
         </div>
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <img src="{%static 'img/8.jpg'%}" alt="">
                 <h6 class="text-center">some restuarant name</h6>
                 <p class="text-center text-secondary">then some description of the some restuarant</p>
             </div>
         </div>
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <img src="{%static 'img/1.jpg'%}" alt="">
                 <h6 class="text-center">some restuarant name</h6>
                 <p class="text-center text-secondary">then some description of the some restuarant</p>
             </div>
         </div>
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <img src="{%static 'img/8.jpg'%}" alt="">
                 <h6 class="text-center">some restuarant name</h6>
                 <p class="text-center text-secondary">then some description of the some restuarant</p>
             </div>
         </div>
         <div class="col-md-3 col-4 p-2">
             <div class="d-flex p-3 flex-column shadow-lg bg-white rounded-2 border restaurant-card">
+                <img src="{%static 'img/7.jpg'%}" alt="">
                 <h6 class="text-center">some restuarant name</h6>
                 <p class="text-center text-secondary">then some description of the some restuarant</p>
             </div>
