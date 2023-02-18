@@ -94,3 +94,6 @@ def LoginRestaurantOwner(request):
 def logout(request):
     auth.logout(request)
     return redirect('index')
+
+def restaurantform(request):
+    return render(request,"Base/restaurantform.html")

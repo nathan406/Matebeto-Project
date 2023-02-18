@@ -11,4 +11,5 @@ urlpatterns = [
     path("LoginCustomer/",views.LoginCustomer, name="LoginCustomer"),
     path("LoginRestaurantOwner/",views.LoginRestaurantOwner, name="LoginRestaurantOwner" ),
     path("RegisterRestaurantOwner/",views.RegisterRestaurantOwner,name="RegisterRestaurantOwner"),
+    path('restaurantform/', views.restaurantform, name="restaurantform")
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

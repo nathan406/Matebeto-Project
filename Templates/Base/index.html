@@ -44,7 +44,9 @@
     <div class="">
         {% if user.is_authenticated and request.user.is_restaurantowner %}
         <h4 class="text-center fw-bolder">
-            Explore Restaurants  or <button type="button" class="btn btn-primary"> Create A Restaurant </button>
+            Explore Restaurants  or  <a href="{% url 'restaurantform' %}">
+                <button type="button" class="btn btn-primary"> Create A Restaurant </button>
+            </a> 
         </h4> 
 
         {% else %}
